@@ -1,8 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title> Blank </ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -14,7 +12,64 @@
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <h1>YM Agent SDK Demo</h1>
+    <ul>
+      <li>
+        <ion-button
+          size="medium"
+          color="warning"
+          (click)="initializeYellowInbox()"
+          >initialize YellowInbox</ion-button
+        >
+      </li>
+
+      <li>
+        <ion-button size="medium" color="primary" (click)="showOverviewScreen()"
+          >Start overview Page</ion-button
+        >
+      </li>
+
+      <li>
+        <ion-button size="medium" color="primary" (click)="showMyChatScreen()"
+          >Start Chat Page</ion-button
+        >
+      </li>
+
+      <li>
+        <div>
+          <p>Change Agent status</p>
+          <ion-button
+            size="medium"
+            color="primary"
+            (click)="setAgentStatusAvailable()"
+            >Available
+          </ion-button>
+          <ion-button
+            size="medium"
+            color="primary"
+            (click)="setAgentStatusBusy()"
+            >Busy</ion-button
+          >
+          <ion-button
+            size="medium"
+            color="primary"
+            (click)="setAgentStatusAway()"
+            >Away</ion-button
+          >
+        </div>
+      </li>
+
+      <li>
+        <ion-button size="medium" color="primary" (click)="getAgentStatus()"
+          >Get agent status</ion-button
+        >
+      </li>
+
+      <li>
+        <ion-button size="medium" color="primary" (click)="logout()"
+          >Logout</ion-button
+        >
+      </li>
+    </ul>
   </div>
 </ion-content>
